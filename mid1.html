@@ -1,0 +1,43 @@
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    div#app { padding: 50px; margin: 30px auto; 
+    height: 50px; max-width: 400px; 
+      border: 1px solid #ccc; box-shadow: 3px 3px 3px #aaa;
+      text-align : center;  }
+    input {padding : 5px; margin-top:auto;}
+    button {padding : 5px; width : 40px;}
+    
+    
+  </style>
+</head>
+<body>
+  <div id="app">
+    
+    
+        <input type="text" v-model = "a"/>
+      <button type="button" v-on:click="increase">++</button>
+      <button type="button" v-on:click="decrease">--</button>
+    
+  </div>
+
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+        a: "0"
+      },
+      methods: {
+        increase() {
+          this.a++;
+        },
+        decrease() {
+           this.a--;
+        }
+      }
+    })
+   </script>
+</body>    
+</html>
